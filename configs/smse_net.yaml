@@ -1,0 +1,27 @@
+model:
+  name: v21_accpower_v8_sa_h24_a8
+  frequency_bins: 256
+  input_frames: 4
+
+audio:
+  sample_rate: 8000
+  n_fft: 512
+  win_length: 512
+  hop_length: 128
+  window: hann
+  db_min: -100.0
+  db_max: 60.0
+  db_reference: 1.0
+
+training:
+  optimizer: AdamW
+  learning_rate: 0.0004
+  weight_decay: 0.01
+  batch_size: 64
+  epochs: 100
+  seed: 42
+  warmup_fraction: 0.05
+  minimum_learning_rate: 0.00004
+  num_workers: 0
+  loss: mse
+  checkpoint_criterion: minimum_validation_mse

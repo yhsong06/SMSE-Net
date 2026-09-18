@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local data, outputs, and experiment artifacts
+data/
+runs/
+outputs/
+evaluation_results.json
+*.wav
+*.npy
+*.npz
+*.csv
+*.xlsx
+*.log
+
+# Keep only the intentionally distributed canonical checkpoint.
+checkpoints/*.pth
+!checkpoints/best_model.pth
